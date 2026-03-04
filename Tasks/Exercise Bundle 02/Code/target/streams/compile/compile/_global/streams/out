@@ -1,0 +1,5 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E040] Syntax Error: /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/DeBruijn.scala:28:6 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m28 |[0m      [33mcase[0m Id(name) => RefDB(subs.indexOf(name))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m      ^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      ')' expected, but 'case' found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

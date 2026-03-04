@@ -26,7 +26,13 @@ object Conditionals {
     case Let(boundId, namedExpr, boundExpr) =>
       interp(subst(boundExpr, boundId, Num(interp(namedExpr))))
     
-    case _ => ??? 
+    case If0(test, thenBody, elseBody) => {
+      val t: Int = interp(test)
+      if(t == 0)
+        interp(thenBody)
+      else 
+        interp(elseBody)
+    }
 
   }
 
@@ -45,7 +51,9 @@ object Conditionals {
         Let(boundId, substNamedExpr, subst(boundExpr, substId, value))
 
     
-    case _ => ??? 
+    case If0(test, thenBody, elseBody) => {
+      If0(subst(), thenBody, elseBody)
+    }
 
   }
 }

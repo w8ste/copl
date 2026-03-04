@@ -24,8 +24,8 @@ object DeBruijn {
     case Add(lhs, rhs) => AddDB(convert(lhs, subs), convert(rhs, subs))
     case Sub(lhs, rhs) => SubDB(convert(lhs, subs), convert(rhs, subs))
     
-      case Let(boundId, namedExpr, body) => ???
-      case Id(name) => ??? 
+      case Let(boundId, namedExpr, body) => LetDB(convert(namedExpr, subs), convert(body, boundId :: subs))
+      case Id(name) => RefDB(subs.indexOf(name))
   }
 
   def interp(expr: Expr, subs: List[Int] = List()): Int = expr match {
@@ -33,8 +33,13 @@ object DeBruijn {
     case AddDB(lhs, rhs) => interp(lhs, subs) + interp(rhs, subs)
     case SubDB(lhs, rhs) => interp(lhs, subs) - interp(rhs, subs)
     
-    case LetDB(namedExpr, body) => ???
-    case RefDB(n)               => ??? 
+    case LetDB(namedExpr, body) => {
+      val value: Int = interp(namedExpr, subs)
+      interp(body, value :: subs)
+    }
+    case RefDB(n)               => subs(n)
 
   }
+
+
 }

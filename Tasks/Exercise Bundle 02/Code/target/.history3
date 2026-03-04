@@ -1,0 +1,14 @@
+1772617626923:compile
+1772617666349:test
+1772621397589:[error] (Test / test) sbt.TestsFailedException: Tests unsuccessful
+1772621398742:test
+1772621581434:[error]     | longer explanation available when compiling with `-explain`
+1772621582112:test
+1772621676662:[error]     | longer explanation available when compiling with `-explain`
+1772621677236:test
+1772640269603:[error] 120 |        val fresh = deriveFreshName(boundId, freeVars(boundExpr) ++ freeVars(value) + substId)
+1772640270404:test
+1772640286478:[error] 120 |        val fresh = ProgramAnalysis.deriveFreshName(boundId, freeVars(boundExpr) ++ freeVars(value) + substId)
+1772640288481:test
+1772640306215:[error] 120 |        val fresh = ProgramAnalysis.deriveFreshName(boundId, ProgramAnalysis.freeVars(boundExpr) ++ freeVars(value) + substId)
+1772640306866:test

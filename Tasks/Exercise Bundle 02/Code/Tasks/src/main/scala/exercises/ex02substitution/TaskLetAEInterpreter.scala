@@ -16,15 +16,30 @@ object ProgramAnalysis {
    * 1) Write a function 'progSize' that counts the number of AST nodes in a program.
    */
 
-  def progSize(p: LAE): Int = ???
+  def progSize(p: LAE): Int =
+    p match {
+      case Num(n) => 1
+      case Add(lhs, rhs) => {
+        1 + progSize(lhs) + progSize(rhs)
+      }
+      case Let(n, ne, b) => {
+        1 + progSize(ne) + progSize(b)
+      }
+      case Id(n) => 1
+    }
 
 
   /*
    * 2) Write a function 'freevars' that collects the free (unbound) variables of a program.
    */
 
-  def freeVars(p: LAE): Set[String] = ???
-
+  def freeVars(p: LAE): Set[String] =
+    p match {
+      case Num(_) => Set()
+      case Id(name) => Set(name)
+      case Add(lhs, rhs) => freeVars(lhs) ++ freeVars(rhs)
+      case Let(n, ne, b) => freeVars(ne) ++ (freeVars(b) - n)
+    }
 
   
 
@@ -47,7 +62,7 @@ object ProgramAnalysis {
 object LetAEInterpreter {
 
   /*
-   * 0) Is this interpreter eager or lazy?
+   * 0) Is this interpreter eager or lazy? lazy
    */
   def interp(expr: LAE): Int = expr match {
     case Num(n)                             => n
@@ -61,7 +76,8 @@ object LetAEInterpreter {
 
   /*
    * 1) Would you say that the programs program1 and program2 are equal?
-   *    What type of equivalences can you think of?
+   *    What type of equivalences can you think of? 
+   *    Alpha equivalence
    */
   val program1 =
     Let("x", Num(2), Let("y", Num(3), Add(Id("x"), Id("y"))))
@@ -75,7 +91,7 @@ object LetAEInterpreter {
 
   /*
    * 2) Would you say that the programs program1b and program2b are equal?
-   *    What is the problem?
+   *    What is the problem? 
    */
   val program1b =
     Let("x", Id("y"), Let("y", Num(3), Add(Id("x"), Id("y"))))
@@ -98,8 +114,12 @@ object LetAEInterpreter {
     case Let(boundId, namedExpr, boundExpr) =>
       
       val substNamedExpr = subst(namedExpr, substId, value)
-      if boundId == substId then
+      if (boundId == substId)
         Let(boundId, substNamedExpr, boundExpr)
+      else if(ProgramAnalysis.freeVars(boundExpr).contains(boundId))
+        val fresh = ProgramAnalysis.deriveFreshName(boundId, ProgramAnalysis.freeVars(boundExpr) ++ ProgramAnalysis.freeVars(value) + substId)
+        val renamed = subst(boundExpr, boundId, Id(fresh))
+        Let(fresh, substNamedExpr, subst(renamed, substId, value))
       else
         Let(boundId, substNamedExpr, subst(boundExpr, substId, value))
 

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="w8ste" name="homework.assignment02let.ZipTest" tests="12" errors="0" failures="12" skipped="0" time="0.017" timestamp="2026-03-04T18:00:13">
+          <properties>
+      <property name="java.specification.version" value="21"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="sbt.supershell" value="false"/><property name="java.vendor.url" value="https://ubuntu.com/"/><property name="jline.terminal" value="none"/><property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/><property name="sun.java.command" value="/home/w8ste/.cache/sbt/boot/sbt-launch/1.12.5/sbt-launch-1.12.5.jar"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2026-01-20"/><property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="21.0.10+7-Ubuntu-124.04"/><property name="user.name" value="w8ste"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/home/w8ste/.cache/JNA/temp/jna344742647376267364.tmp"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="21.0.10"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="native.encoding" value="UTF-8"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/><property name="stderr.encoding" value="UTF-8"/><property name="java.vendor" value="Ubuntu"/><property name="scala.ext.dirs" value="/home/w8ste/.sbt/1.0/java9-rt-ext-ubuntu_21_0_10"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="java.class.path" value="/home/w8ste/.cache/sbt/boot/sbt-launch/1.12.5/sbt-launch-1.12.5.jar"/><property name="java.vm.vendor" value="Ubuntu"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/Berlin"/><property name="java.vm.specification.version" value="21"/><property name="os.name" value="Linux"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/w8ste"/><property name="user.language" value="en"/><property name="sbt.script" value="/usr/bin/sbt"/><property name="sbt.ipcsocket.tmpdir" value="/run/user/1000/.sbtb2bfca7f/ipcsocket"/><property name="swoval.tmpdir" value="/run/user/1000/.sbtb2bfca7f/swoval"/><property name="jline.esc.timeout" value="0"/><property name="stdout.encoding" value="UTF-8"/><property name="path.separator" value=":"/><property name="os.version" value="6.17.0-14-generic"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/usr/lib/x86_64-linux-gnu/libfakeroot"/><property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/><property name="user.dir" value="/home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 02/Code"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="21.0.10+7-Ubuntu-124.04"/><property name="java.class.version" value="65.0"/>
+    </properties>
+          <testcase classname="homework.assignment02let.ZipTest" name="Zipadd0" time="0.01">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zipadd(Zip.scala:17)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$1(ZipTest.scala:7)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zipadd1" time="0.0">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zipadd(Zip.scala:17)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$2(ZipTest.scala:11)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zipadd2" time="0.001">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zipadd(Zip.scala:17)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$3(ZipTest.scala:15)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zipadd3" time="0.0">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zipadd(Zip.scala:17)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$4(ZipTest.scala:19)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zip0" time="0.0">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zip(Zip.scala:18)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$5(ZipTest.scala:23)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zip1" time="0.001">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zip(Zip.scala:18)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$6(ZipTest.scala:27)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zip2" time="0.0">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zip(Zip.scala:18)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$7(ZipTest.scala:31)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="Zip3" time="0.001">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.zip(Zip.scala:18)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$8(ZipTest.scala:35)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="AddMatrix0" time="0.001">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.addMatrix(Zip.scala:19)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$9(ZipTest.scala:40)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="AddMatrix1" time="0.001">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.addMatrix(Zip.scala:19)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$10(ZipTest.scala:47)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="AddMatrix2" time="0.0">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.addMatrix(Zip.scala:19)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$11(ZipTest.scala:54)
+</failure>
+                    </testcase><testcase classname="homework.assignment02let.ZipTest" name="AddMatrix3" time="0.002">
+                      <failure message="an implementation is missing" type="scala.NotImplementedError">scala.NotImplementedError: an implementation is missing
+	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)
+	at homework.assignment02let.Zip$.addMatrix(Zip.scala:19)
+	at homework.assignment02let.ZipTest.$init$$$anonfun$12(ZipTest.scala:61)
+</failure>
+                    </testcase>
+          <system-out><![CDATA[]]></system-out>
+          <system-err><![CDATA[]]></system-err>
+        </testsuite>
