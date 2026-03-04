@@ -1,0 +1,16 @@
+(module
+  (memory (export "memory") 1)
+  (func $fibonacci (param $limit i32) (result i32)
+    (local $a i32) (local $b i32) (local $temp i32) (local $i i32)
+    (local.set $a (i32.const 0))
+    (local.set $b (i32.const 1))
+    (loop $loop
+      (local.set $temp (local.get $a))
+      (local.set $a (local.get $b))
+      (local.set $b (i32.add (local.get $temp) (local.get $b)))
+      (br_if $loop (i32.le_s (local.get $a) (local.get $limit)))
+    )
+    (local.get $temp)
+  )
+  (export "fibonacci" (func $fibonacci))
+)

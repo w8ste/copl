@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(homework.assignment00hello.PeanoNumbersTests, CustomFingerprint{suite='munit.Suite'}, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for munit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 4, Failed 0, Errors 0, Passed 4[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework.assignment00hello.PeanoNumbersTests[0m

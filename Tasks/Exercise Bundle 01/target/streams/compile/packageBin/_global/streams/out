@@ -1,0 +1,145 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/copl_3-0.0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$True$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$True$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$BiImp.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$BiImp.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Or$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Or$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Imp.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Imp.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$Not$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$Not$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$And.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$And.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$TrueValue$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$TrueValue$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$And$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$And$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$True$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$True$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$BiImp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$BiImp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Or.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Or.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Imp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Imp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Not$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Not$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$And.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$And.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$Not.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$Not.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$Or$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$Or$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$False$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$False$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$Value.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$Value.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/ScalaWarmUp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/ScalaWarmUp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$And$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$And$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Not.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Not.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$Or.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$Or.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$False$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$False$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/ScalaWarmUp.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/ScalaWarmUp.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$Expr.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$Expr.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/Preprocessor$Expr.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/Preprocessor$Expr.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/BooleanInterpreter$FalseValue$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/BooleanInterpreter$FalseValue$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework/assignment01basic/ScalaWarmUp.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/homework/assignment01basic/ScalaWarmUp.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Succ.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Succ.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Mult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Mult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Exercise01.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Exercise01.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$PeanoNumber.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$PeanoNumber.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$AE.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$AE.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Exercise01$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Exercise01$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Factorial.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Factorial.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Factorial$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Factorial$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees$Node.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees$Node.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees$Leaf$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees$Leaf$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Num$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Num$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Arithmetics$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Arithmetics$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Inc.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Inc.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Factorial.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Factorial.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees$Node$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees$Node$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Num.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Num.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Add$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Add$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees$Tree.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees$Tree.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Zero$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Zero$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Succ$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Succ$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees$Leaf.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees$Leaf.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Arithmetics.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Arithmetics.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Arithmetics.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Arithmetics.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Trees$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Trees$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/Exercise01.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/Exercise01.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Mult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Mult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Inc$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Inc$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	exercises/ex01/ArithmeticExpressions$Add.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/target/scala-3.7.3/classes/exercises/ex01/ArithmeticExpressions$Add.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

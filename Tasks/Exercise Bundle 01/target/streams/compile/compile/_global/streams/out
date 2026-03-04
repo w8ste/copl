@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E171] Type Error: /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 01/Tasks/src/main/scala/homework/assignment01basic/Preprocessor.scala:31:37 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m      [33mcase[0m BiImp(lhs, rhs) => And(Imp(preproc(lhs)), preproc(rhs))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                  ^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mmissing argument for parameter rhs of [33mmethod[0m [35mapply[0m in [33mobject[0m [35mImp[0m: (lhs: homework.assignment01basic.Preprocessor.Expr, rhs:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  homework.assignment01basic.Preprocessor.Expr):[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  homework.assignment01basic.Preprocessor.Imp[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
