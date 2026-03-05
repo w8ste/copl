@@ -14,7 +14,9 @@ object Zip {
   // --------------------------------------------
 
   
-  def zipadd(lhs: List[Int], rhs: List[Int]): List[Int] = ???
-  def zip[A, B](lhs: List[A], rhs: List[B]): List[(A, B)] = ???
-  def addMatrix(lhs: List[List[Int]], rhs: List[List[Int]]): List[List[Int]] = ??? 
+  def zipadd(lhs: List[Int], rhs: List[Int]): List[Int] = (lhs zip rhs).map {case (x, y) => x + y}
+  def zip[A, B](lhs: List[A], rhs: List[B]): List[(A, B)] = lhs zip rhs
+  def addMatrix(lhs: List[List[Int]], rhs: List[List[Int]]): List[List[Int]] = {
+    (lhs zip rhs).map {(l1, r1) => zipadd(l1, r1)}
+  }
 }

@@ -1,0 +1,188 @@
+2026.03.06 00:44:25 INFO  Started: Metals version 2.0.0-M7 in folders '/home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code' for client emacs GNU Emacs 29.3 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.41, cairo version 1.18.0)
+ of 2024-04-01, modified by Debian.[0m
+2026.03.06 00:44:28 WARN  [default] no logical packages found in source path (mode: MBT)[0m
+Mar 06, 2026 12:44:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Mar 06, 2026 12:44:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2026.03.06 00:44:28 INFO  mbt-v2: indexing 9 files[0m
+2026.03.06 00:44:28 INFO  time: mbt-v2 loaded index for 9 files in 0.51s[0m
+Starting up PC for Metals/default. Sourcepath: empty
+Mar 06, 2026 12:44:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 54
+2026.03.06 00:45:05 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Conditionals.scala[0m
+2026.03.06 00:46:32 INFO  compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.[0m
+Starting up PC for Metals/default. Sourcepath: empty
+Mar 06, 2026 12:46:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 146
+2026.03.06 00:46:45 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Conditionals.scala[0m
+Mar 06, 2026 12:47:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 222
+Mar 06, 2026 12:47:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 221
+Mar 06, 2026 12:47:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 224
+Mar 06, 2026 12:47:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 295
+Mar 06, 2026 12:47:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 294
+Mar 06, 2026 12:47:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 293
+2026.03.06 00:47:12 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Conditionals.scala[0m
+2026.03.06 00:47:22 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Conditionals.scala[0m
+Mar 06, 2026 12:48:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 366
+2026.03.06 00:49:33 INFO  compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.[0m
+Starting up PC for Metals/default. Sourcepath: empty
+2026.03.06 00:49:33 ERROR java.lang.AssertionError: assertion failed: file:///home/w8ste/uni/copl/Tasks/Exercise%20Bundle%2002/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala: 651 >= 651 (full report at: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/.metals/.reports/metals-full/2026-03-06/r_compiler-error__00-49-33-864.md)[0m
+Starting up PC for Metals/default. Sourcepath: empty
+Mar 06, 2026 12:53:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 492
+Mar 06, 2026 12:53:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 491
+Mar 06, 2026 12:53:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 490
+2026.03.06 00:53:12 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+2026.03.06 00:53:14 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+Mar 06, 2026 12:54:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 534
+Mar 06, 2026 12:54:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 533
+2026.03.06 00:54:48 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+Mar 06, 2026 12:55:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 599
+Mar 06, 2026 12:55:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 606
+Mar 06, 2026 12:55:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 605
+Mar 06, 2026 12:55:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 604
+Mar 06, 2026 12:55:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 603
+2026.03.06 00:55:09 ERROR Cannot invoke "scala.reflect.internal.Symbols$Symbol.tpeHK()" because "sym" is null
+java.lang.NullPointerException: Cannot invoke "scala.reflect.internal.Symbols$Symbol.tpeHK()" because "sym" is null
+	at scala.reflect.internal.Types$Type.computeMemberType(Types.scala:724)
+	at scala.reflect.internal.Types$Type.memberType(Types.scala:721)
+	at scala.meta.internal.pc.MetalsGlobal.metalsSeenFromType(MetalsGlobal.scala:1070)
+	at scala.meta.internal.pc.completions.MatchCaseCompletions$CaseKeywordCompletion.<init>(MatchCaseCompletions.scala:58)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe(Completions.scala:552)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe$(Completions.scala:475)
+	at scala.meta.internal.pc.MetalsGlobal.completionPositionUnsafe(MetalsGlobal.scala:39)
+	at scala.meta.internal.pc.completions.Completions.completionPosition(Completions.scala:461)
+	at scala.meta.internal.pc.completions.Completions.completionPosition$(Completions.scala:449)
+	at scala.meta.internal.pc.MetalsGlobal.completionPosition(MetalsGlobal.scala:39)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:565)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:60)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$complete$1(ScalaPresentationCompiler.scala:267)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:150)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$withInterruptableCompiler$1(CompilerAccess.scala:93)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:214)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:157)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2026.03.06 00:55:12 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+2026.03.06 00:55:35 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+2026.03.06 00:55:38 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+Mar 06, 2026 12:55:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 720
+Mar 06, 2026 12:55:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 719
+Mar 06, 2026 12:56:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 724
+Mar 06, 2026 12:56:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 762
+Mar 06, 2026 12:56:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 808
+2026.03.06 00:56:33 ERROR Cannot invoke "scala.reflect.internal.Symbols$Symbol.tpeHK()" because "sym" is null
+java.lang.NullPointerException: Cannot invoke "scala.reflect.internal.Symbols$Symbol.tpeHK()" because "sym" is null
+	at scala.reflect.internal.Types$Type.computeMemberType(Types.scala:724)
+	at scala.reflect.internal.Types$Type.memberType(Types.scala:721)
+	at scala.meta.internal.pc.MetalsGlobal.metalsSeenFromType(MetalsGlobal.scala:1070)
+	at scala.meta.internal.pc.completions.MatchCaseCompletions$CaseKeywordCompletion.<init>(MatchCaseCompletions.scala:58)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe(Completions.scala:552)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe$(Completions.scala:475)
+	at scala.meta.internal.pc.MetalsGlobal.completionPositionUnsafe(MetalsGlobal.scala:39)
+	at scala.meta.internal.pc.completions.Completions.completionPosition(Completions.scala:461)
+	at scala.meta.internal.pc.completions.Completions.completionPosition$(Completions.scala:449)
+	at scala.meta.internal.pc.MetalsGlobal.completionPosition(MetalsGlobal.scala:39)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:565)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:60)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$complete$1(ScalaPresentationCompiler.scala:267)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:150)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$withInterruptableCompiler$1(CompilerAccess.scala:93)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:214)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:157)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2026.03.06 00:56:33 ERROR Cannot invoke "scala.reflect.internal.Symbols$Symbol.tpeHK()" because "sym" is null
+java.lang.NullPointerException: Cannot invoke "scala.reflect.internal.Symbols$Symbol.tpeHK()" because "sym" is null
+	at scala.reflect.internal.Types$Type.computeMemberType(Types.scala:724)
+	at scala.reflect.internal.Types$Type.memberType(Types.scala:721)
+	at scala.meta.internal.pc.MetalsGlobal.metalsSeenFromType(MetalsGlobal.scala:1070)
+	at scala.meta.internal.pc.completions.MatchCaseCompletions$CaseKeywordCompletion.<init>(MatchCaseCompletions.scala:58)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe(Completions.scala:552)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe$(Completions.scala:475)
+	at scala.meta.internal.pc.MetalsGlobal.completionPositionUnsafe(MetalsGlobal.scala:39)
+	at scala.meta.internal.pc.completions.Completions.completionPosition(Completions.scala:461)
+	at scala.meta.internal.pc.completions.Completions.completionPosition$(Completions.scala:449)
+	at scala.meta.internal.pc.MetalsGlobal.completionPosition(MetalsGlobal.scala:39)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:565)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:60)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$complete$1(ScalaPresentationCompiler.scala:267)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:150)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$withInterruptableCompiler$1(CompilerAccess.scala:93)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:214)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:157)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+Mar 06, 2026 12:56:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 822
+2026.03.06 00:56:37 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+Mar 06, 2026 12:56:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 889
+Mar 06, 2026 12:56:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 919
+Mar 06, 2026 12:56:56 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 960
+Mar 06, 2026 12:57:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 990
+Mar 06, 2026 12:57:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 989
+Mar 06, 2026 12:57:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 988
+Mar 06, 2026 12:57:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1032
+Mar 06, 2026 12:57:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1031
+Mar 06, 2026 12:57:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1030
+Mar 06, 2026 12:57:24 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1077
+Mar 06, 2026 12:57:24 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1076
+Mar 06, 2026 12:57:24 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1075
+Mar 06, 2026 12:57:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1123
+Mar 06, 2026 12:57:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1205
+Mar 06, 2026 12:57:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1204
+2026.03.06 00:57:57 WARN  no build target for: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala[0m
+2026.03.06 00:58:30 INFO  compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.[0m
+Starting up PC for Metals/default. Sourcepath: empty
+2026.03.06 00:58:30 ERROR java.lang.AssertionError: assertion failed: file:///home/w8ste/uni/copl/Tasks/Exercise%20Bundle%2002/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala: 748 >= 748 (full report at: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/.metals/.reports/metals-full/2026-03-06/r_compiler-error__00-58-30-403.md)[0m
+Starting up PC for Metals/default. Sourcepath: empty
+2026.03.06 00:59:05 INFO  compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.[0m
+Starting up PC for Metals/default. Sourcepath: empty
+2026.03.06 00:59:05 ERROR java.lang.AssertionError: assertion failed: file:///home/w8ste/uni/copl/Tasks/Exercise%20Bundle%2002/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala: 748 >= 748 (full report at: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/.metals/.reports/metals-full/2026-03-06/r_compiler-error__00-59-05-977.md)[0m
+Starting up PC for Metals/default. Sourcepath: empty
+2026.03.06 00:59:05 INFO  compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.[0m
+Starting up PC for Metals/default. Sourcepath: empty
+2026.03.06 00:59:05 ERROR java.lang.AssertionError: assertion failed: file:///home/w8ste/uni/copl/Tasks/Exercise%20Bundle%2002/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala: 748 >= 748 (full report at: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/.metals/.reports/metals-full/2026-03-06/r_compiler-error__00-59-06-824.md)[0m

@@ -1,6 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E171] Type Error: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Conditionals.scala:55:15 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m55 |[0m      If0(subst(), thenBody, elseBody)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m          ^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mmissing argument for parameter expr of [33mmethod[0m [35msubst[0m in [33mobject[0m [35mConditionals[0m: (expr: homework.assignment02let.Conditionals.Expr, substId: String, value: homework.assignment02let.Conditionals.Expr):[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  homework.assignment02let.Conditionals.Expr[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/Tasks/src/main/scala/homework/assignment02let/Zip.scala:17:72 ------------------------------------------------------------------[0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m17 |[0m  [33mdef[0m [36mzipadd[0m([36mlhs[0m: [35mList[0m[[35mInt[0m], [36mrhs[0m: [35mList[0m[[35mInt[0m]): [35mList[0m[[35mInt[0m] = (lhs.toVector + rhs.toVector).toList[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                           ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                           value + is not a member of Vector[Int][0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

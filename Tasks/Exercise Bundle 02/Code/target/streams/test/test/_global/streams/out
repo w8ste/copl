@@ -2,10 +2,8 @@
 [0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(homework.assignment02let.ConditionalsTest, CustomFingerprint{suite='munit.Suite'}, false, [SuiteSelector])[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(homework.assignment02let.ZipTest, CustomFingerprint{suite='munit.Suite'}, false, [SuiteSelector])[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for munit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 58, Failed 17, Errors 0, Passed 41[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 58, Failed 0, Errors 0, Passed 58[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework.assignment02let.ConditionalsTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	homework.assignment02let.ZipTest[0m
 [0m[[0m[0mdebug[0m] [0m[0m	homework.assignment02let.DeBruijnTest[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	homework.assignment02let.ConditionalsTest[0m
-[0m[[0m[31merror[0m] [0m[0m	homework.assignment02let.ZipTest[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

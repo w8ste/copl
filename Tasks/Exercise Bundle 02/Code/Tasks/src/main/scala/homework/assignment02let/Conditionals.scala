@@ -42,7 +42,7 @@ object Conditionals {
     case Num(n)                             => expr
     case Add(lhs, rhs)                      => Add(subst(lhs, substId, value), subst(rhs, substId, value))
     case Sub(lhs, rhs)                      => Sub(subst(lhs, substId, value), subst(rhs, substId, value))
-    case Id(name)                           => if substId == name then value else expr
+    case Id(name)                           => if (substId == name) then value else expr
     case Let(boundId, namedExpr, boundExpr) =>
       val substNamedExpr = subst(namedExpr, substId, value)
       if boundId == substId then
@@ -52,7 +52,7 @@ object Conditionals {
 
     
     case If0(test, thenBody, elseBody) => {
-      If0(subst(), thenBody, elseBody)
+      If0(subst(test, substId, value), subst(thenBody, substId, value), subst(elseBody, substId, value))
     }
 
   }
