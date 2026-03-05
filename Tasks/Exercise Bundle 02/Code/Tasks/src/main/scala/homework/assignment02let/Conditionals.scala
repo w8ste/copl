@@ -29,9 +29,9 @@ object Conditionals {
     case If0(test, thenBody, elseBody) => {
       val t: Int = interp(test)
       if(t == 0)
-        interp(thenBody)
+        interp(thenBody);
       else 
-        interp(elseBody)
+        interp(elseBody);
     }
 
   }

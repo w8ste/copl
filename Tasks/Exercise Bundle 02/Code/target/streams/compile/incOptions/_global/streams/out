@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 02/Code/target/scala-3.7.3/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/target/scala-3.7.3/classes.bak[0m
 [0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Add$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id.class[0m
@@ -61,35 +61,23 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub$.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$If0.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRolling back changes to class files.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRestoring class files: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Add$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Add.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$If0$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Num$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Num.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Expr.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals$If0.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Add$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Add.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$If0$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Num$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Num.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Expr.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Expr.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Conditionals.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$If0.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/w8ste/uni/copl/copl-2025-main/Tasks/Exercise Bundle 02/Code/target/scala-3.7.3/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Num.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Let$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Add.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Num$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Id.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$Sub.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals$If0$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Conditionals.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/w8ste/uni/copl/Tasks/Exercise Bundle 02/Code/target/scala-3.7.3/classes.bak[0m

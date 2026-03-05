@@ -12,3 +12,4 @@
 1772640288481:test
 1772640306215:[error] 120 |        val fresh = ProgramAnalysis.deriveFreshName(boundId, ProgramAnalysis.freeVars(boundExpr) ++ freeVars(value) + substId)
 1772640306866:test
+1772720518129:compile
