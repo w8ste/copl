@@ -4,6 +4,9 @@
 #+OPTIONS: toc:2
 
 * TABLE OF CONTENTS :toc:
+- [[#two-kinds-of-language-evaluators][Two Kinds of Language Evaluators]]
+  - [[#interpreter--program_l---value][Interpreter :: Program_L -> Value]]
+  - [[#compiler--program_l---program_t][Compiler :: Program_L -> Program_T]]
 - [[#substitution][Substitution]]
   - [[#definitions][Definitions]]
   - [[#two-substitution-regimes][Two Substitution Regimes]]
@@ -12,7 +15,26 @@
 - [[#environments][Environments]]
   - [[#let-and-environments][let and Environments]]
   - [[#static-vs-dynamic-scoping][Static vs. Dynamic Scoping]]
+  - [[#dynamic-scoping][Dynamic Scoping]]
+  - [[#static-scoping][Static Scoping]]
 - [[#template][Template]]
+
+* Two Kinds of Language Evaluators
+** Interpreter :: Program_L -> Value
+#+begin_src python
+  '''
+  An interpreter consumes a single program and simulates its execution.
+  The interpreter does what we would expect \"running the program\" should do.
+  '''
+#+end_src
+
+** Compiler :: Program_L -> Program_T
+#+begin_src python
+  '''
+  A compiler consumes a program and produces another program.
+  The output program must then be further evaluated.
+  '''
+#+end_src
 
 * Substitution
 ** Definitions
@@ -168,19 +190,82 @@ They are supposed to improve complexity in comparison to substitution.
 *** Definition Static/Lexical Scoping
  #+begin_src python
    '''
-   The scope of a name binding is determined syntactically (at compile-time)
+   The scope of a name binding is determined syntactically (at compile-time).
    '''   
  #+end_src
 
 *** Definition Dynamic Scoping
  #+begin_src python
    '''
-   
+   The scope of a name binding is determined by the execution context (at runtime).
    '''   
  #+end_src
 
+** Dynamic Scoping
+*** Why it could lead to fragile software
+#+begin_src python
+          '''
+          1. Variable references depend on the runtime call chain, making behavior hard to
+          reason about.
 
+          2. Small changes to the call structure can change which variables are visible,
+          unexpectedly altering program behavior.
+          '''
 
+#+end_src
+
+*** interp(,,): Int =
+#+begin_src scala
+  def interp(expr: F1LAE, funDefs: FunDefs, env: Env): Int =
+    expr match {
+      case Num(n) => n
+      case Add(lhs, rhs) =>
+        interp(lhs, funDefs, env) + interp(rhs, funDefs, env)
+      case Sub(lhs, rhs) =>
+        interp(lhs, funDefs, env) - interp(rhs, funDefs, env)
+      case Let(id, lExpr, body) =>
+        // NOTE: This computes the value of the identifer,
+        //       by interpreting its assignment expression
+        val newEnv = env + (id -> interp(lExpr, funDefs, env))
+        interp(body, funDefs, newEnv)
+      case Id(name) => env(name)
+      case App(fun, arg) => funDefs(fun) match {
+        case FunDef(param, body) =>
+          // NOTE: We do the same as above. The important part is, that env is extended.
+          //       This marks the difference between dynamic and static scoping.
+          val funEnv = env + (param -> interp(arg, funDefs, env))
+          interp(body, funDefs, funEnv)
+      }
+    }
+#+end_src
+
+** Static Scoping 
+
+*** interp(,,): Int =
+#+begin_src scala
+  def interp(expr: F1LAE, funDefs: FunDefs, env: Env): Int =
+    expr match {
+      case Num(n) => n
+      case Add(lhs, rhs) =>
+        interp(lhs, funDefs, env) + interp(rhs, funDefs, env)
+      case Sub(lhs, rhs) =>
+        interp(lhs, funDefs, env) - interp(rhs, funDefs, env)
+      case Let(id, lExpr, body) =>
+        // NOTE: This computes the value of the identifer,
+        //       by interpreting its assignment expression
+        val newEnv = env + (id -> interp(lExpr, funDefs, env))
+        interp(body, funDefs, newEnv)
+      case Id(name) => env(name)
+      case App(fun, arg) => funDefs(fun) match {
+        case FunDef(param, body) =>
+          // NOTE: We do the same as above. The important part is, that env is replaced.
+          //       This marks the difference between dynamic and static scoping. The
+          //       passed environment solely contains the value of the passed argument.
+          val funEnv = Map(param -> interp(arg, funDefs, env))
+          interp(body, funDefs, funEnv)
+      }
+    }
+#+end_src
 * Template
  #+begin_src python
    '''
