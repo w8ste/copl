@@ -13,6 +13,7 @@
   - [[#implementing-substitution][Implementing Substitution]]
   - [[#conclusion][Conclusion]]
 - [[#environments][Environments]]
+  - [[#environments-instead-of-substitution][Environments instead of substitution]]
   - [[#let-and-environments][let and Environments]]
   - [[#static-vs-dynamic-scoping][Static vs. Dynamic Scoping]]
   - [[#dynamic-scoping][Dynamic Scoping]]
@@ -25,6 +26,29 @@
   '''
   An interpreter consumes a single program and simulates its execution.
   The interpreter does what we would expect \"running the program\" should do.
+  '''
+#+end_src
+
+*** Terminology
+**** Host Language (or base language)
+#+begin_src python
+  '''
+  The language, in which we implement the interpreter.
+  '''
+#+end_src
+
+**** Interpreted langugage (or object language)
+#+begin_src python
+  '''
+  The language the the interpreter evaluates. We assume that we already understand
+  the host langugage.
+  '''
+#+end_src
+
+**** Meta-interpreter or Meta-circular interpreter
+#+begin_src python
+  '''
+  host language = interpreted language.
   '''
 #+end_src
 
@@ -162,7 +186,12 @@ This is called capture-avoiding substitution function that implements sound vari
  #+end_src
 
 * Environments
-They are supposed to improve complexity in comparison to substitution.
+** Environments instead of substitution
+#+begin_src python
+  '''
+  Substitution is inefficient because every variable binding requires traversing and rewriting the entire expression tree. The resulting complexity of substitution for a program with n AST nodes is O(n^2)
+  '''
+#+end_src
 
 ** let and Environments
  #+begin_src python
@@ -201,6 +230,28 @@ They are supposed to improve complexity in comparison to substitution.
    '''   
  #+end_src
 
+*** Comparison table
+| Aspect              | Static Scoping (Lexical Scoping)                                             | Dynamic Scoping                                                    |
+|---------------------+------------------------------------------------------------------------------+--------------------------------------------------------------------|
+| Scope Determination | Determined by the variable’s position in the source code.                    | Determined by the order of function calls during execution.        |
+| Basis of Resolution | Depends on the lexical structure of the program text.                        | Depends on the runtime call stack and execution context.           |
+| Time of Resolution  | Usually determined at compile time.                                          | Determined at runtime.                                             |
+| Predictability      | Easy to understand since variable bindings can be seen directly in the code. | Harder to reason about because bindings depend on call history.    |
+| Dependency          | Independent of how functions are called.                                     | Depends on which function calls the current function.              |
+| Modularity          | Supports modular and maintainable programs.                                  | Can lead to fragile programs due to context-dependent behavior.    |
+| Usage in Languages  | Used in most modern languages (e.g., C, C++, Java).                          | Rarely used in modern languages; mostly historical or specialized. |
+
+*** Transfering scoping for F1LAE exam task
+
+**** Dynmaic Scoping to Static Scoping
+1. Find function application case
+2. The new environment funEnv which calls the interp(body, funDefs, funEnv)
+   is computed by Map(param -> interp(arg, funDefs, env))
+
+**** Static Scoping to Dynamic Scoping
+1. Find function application case
+2. Add env (parameter) to the funEnv declaration.
+   
 ** Dynamic Scoping
 *** Why it could lead to fragile software
 #+begin_src python
@@ -239,7 +290,15 @@ They are supposed to improve complexity in comparison to substitution.
     }
 #+end_src
 
-** Static Scoping 
+** Static Scoping
+
+*** Advantages
+1. Easier reasoning about programs
+2. Better modularity and reliability
+
+*** Disadvantages
+1. More complex implementation via closures
+2. No implicit parameter passing
 
 *** interp(,,): Int =
 #+begin_src scala
