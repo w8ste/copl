@@ -1,0 +1,37 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/w8ste/uni/copl/summary.org
+
+
+* Definitions
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-03-07 Sat 12:14
+:ARCHIVE_FILE: ~/uni/copl/summary.org
+:ARCHIVE_OLPATH: Substitution
+:ARCHIVE_CATEGORY: summary
+:END:
+ Binding Instance:
+ #+begin_src python
+   '''
+   A binding instance of an identifier is the occurence of the identifier that gives it its
+   value.
+   '''   
+ #+end_src
+
+ Scope:
+ #+begin_src python
+    '''
+    The scope of a binding instance, BI, is the program region, in which instances of the
+    identifier refer to the value bound by BI.
+    '''   
+ #+end_src 
+
+  Bound instance: 
+  #+begin_src python
+    '''
+    An identifier is bound if it is contained within the scope of a binding instance of its
+    name.
+    '''   
+ #+end_src
+

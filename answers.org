@@ -1,0 +1,33 @@
+* Exercise 03
+** Task 1: Taxonomy of functions
+1. What is the difference between first-order functions and higher-order functions? Give an example for a first-order function and for a higher-order function!
+   #+begin_src python
+     '''
+     First-order functions are functions that neither return nor take other functions are
+     parameters. They parameterise computations over data.
+     Higher-order functions on the other hand return and/or take other functions as parameters
+     and parameterize computations over other computations.
+     '''
+     # First order
+     def add(n) -> Int:
+         return n + 3
+
+     # Higher order
+     def apply_operation(x, operation):
+         return operation(x)
+   #+end_src
+
+2. What does it mean that a language has first-class functions? Does a language with first-class functions support higher-order functions?
+   #+begin_src python
+     '''
+     It means that functions are values with all the rights of other values. As long as the languages support functions, which accept parameters and return values, then first-class implies higher-order functions.
+     '''     
+   #+end_src
+
+ 3. Are there first-class/higher-order functions in F1LAE? Justify your answer to this question by pointing out relevant parts in the F1LAE interpreter code!
+    #+begin_src python
+      '''
+      No, F1LAE does neither support first-class nor higher-order functions. This is because the language only allows predefined function calls by name. When the interpreter evaluates an argument expression and would simply read the function name, the interp function would throw an found \'found unbound id\' error.
+      '''
+    #+end_src
+    

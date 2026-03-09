@@ -1,0 +1,190 @@
+#+TITLE: w8stes's GNU Emacs Config
+#+AUTHOR: w8ste
+#+STARTUP: showerverything
+#+OPTIONS: toc:2
+
+* TABLE OF CONTENTS :toc:
+- [[#substitution][Substitution]]
+  - [[#definitions][Definitions]]
+  - [[#two-substitution-regimes][Two Substitution Regimes]]
+  - [[#implementing-substitution][Implementing Substitution]]
+  - [[#conclusion][Conclusion]]
+- [[#environments][Environments]]
+  - [[#let-and-environments][let and Environments]]
+  - [[#static-vs-dynamic-scoping][Static vs. Dynamic Scoping]]
+- [[#template][Template]]
+
+* Substitution
+** Definitions
+*** Binding Instance:
+ #+begin_src python
+   '''
+   A binding instance of an identifier is the occurence of the identifier that gives it its
+   value.
+   '''   
+ #+end_src
+
+*** Scope:
+ #+begin_src python
+    '''
+    The scope of a binding instance, BI, is the program region, in which instances of the
+    identifier refer to the value bound by BI.
+    '''   
+ #+end_src 
+
+*** Bound instance: 
+ #+begin_src python
+   '''
+   An identifier is bound if it is contained within the scope of a binding instance of its
+   name.
+   '''   
+ #+end_src
+
+*** Free instance:
+ #+begin_src python
+   '''
+   An identifier not contained in the scope of any binding instance of its name is said to be
+   free.
+   '''   
+ #+end_src
+
+*** Substitution:
+ #+begin_src python
+   '''
+   To substitute identifer \'i\' in \'e\' with expression \'v\', replace all free
+   instances of \'i\' in \'e\' with \'v\'.
+   '''   
+ #+end_src 
+ - This definition implies the notion of scope, which means, that we only substitute the bindining instance of an identifier within it's scope
+ - An inner binding for same identifier name introduces a new scope. The outer binding's scope is shadowed or masked by the inner binding.
+
+*** Alpha-Equivalence
+ #+begin_src python
+   '''
+   Two terms are identical up to consistent renaming of variables.
+   - terns have the same structure
+   - references resolve to the same declarations
+   - but names used for references and declarations may differ
+   '''   
+ #+end_src
+Example: Let(y, bound, body) $\equiv_\alpha$ Let(z, bound, subst(y, Id(z), body) if !freeVars(body).contains(z))
+
+** Two Substitution Regimes
+*** Eager substitution (static and dynamic reduction)
+#+begin_src python
+    '''
+    Avoids re-computing the same value several times.
+    '''
+      {let {x {+ 5 5}} {let {y {- x 3}} {+ y y}}}
+    = {let {x 10} {let {y {- x 3}} {+ y y}}}
+    = {let {y {- 10 3}} {+ y y}}
+    = {let {y 7} {+ y y}}
+    = {+ 7 7}
+    = 14
+
+    '''
+    Notice how \'+ 5 5\' is evaluated directly and only evaluated once. Afterwards x is
+    immediatly substituted in \'y's\' let expression.
+    '''
+ #+end_src
+
+*** Lazy substitution (static reduction)
+#+begin_src python
+  '''
+  The expression may be evaluated multiple times.
+  '''
+  {let {x {+ 5 5}} {let {y {- x 3}} {+ y y}}}
+  = {let {y {- {+ 5 5} 3}} {+ y y}}
+  = {+ {- {+ 5 5} 3} {- {+ 5 5} 3}}
+  = {+ {- 10 3} {- {+ 5 5} 3}}
+  = {+ {- 10 3} {- 10 3}}
+  = {+ 7 {- 10 3}}
+  = {+ 7 7}
+  = 14
+  '''
+  Notice how \'+ 5 5\' is only evaluated when actually necessary.  
+  '''
+#+end_src
+
+** Implementing Substitution
+#+begin_src scala
+    // id -> Identifier, which will be substituted by expression bound in expression body
+    def subst(id: String, bound: Exp, body: Exp): Exp = body match {
+      case Num(n) => body
+      case Bool(b) => body
+      case Plus(lhs, rhs) => Plus(subst(id, bound, lhs), subst(id, bound, rhs))
+      case Mult(lhs, rhs) => Mult(subst(id, bound, lhs), subst(id, bound, rhs))
+      case Div(lhs, rhs) => Div(subst(id, bound, lhs), subst(id, bound, rhs))
+      // If y is equal to our identifier, we return our binding bound, else Id(y)
+      case Id(y) => if (y == id) bound else Id(y)
+      case Let(letId, boundE, bodyE) =>
+        if(id == letId) Let(id, subst(id, bound, boundE), bodyE)
+        else
+          if (!freeVars(bound).contains(letId))
+            Let(letId, subst(id, bound, boundE), subst(id, bound, bodyE))
+          else
+            val z = freshName(freeVars(bound) ++ freeVars(bodyE))
+            Let(z, subst(id, bound, boundE), subst(id, bound, subst(letId, Id(z), bodyE)))
+    }
+#+end_src
+This is called capture-avoiding substitution function that implements sound variable replacement. This is fundamental for programming languages and mathematics in general.
+
+** Conclusion
+ #+begin_src python
+   '''
+   Substitution is not practical for implementing programming languages, becuase the resulting
+   interpreter requires a full traversel of the body for each variable definition.
+   If the program has size n (measured in abstract syntax tree nodes), then the complexity of
+   the interpreter is O(n^2)
+   '''   
+ #+end_src
+
+* Environments
+They are supposed to improve complexity in comparison to substitution.
+
+** let and Environments
+ #+begin_src python
+   '''
+   The interpreter receives a store called environment, which maps identifiers to values. We
+   represent environments as values of the type Env.
+
+   type Env = Map[String, Int]
+   (let (x e) ...) stores a mapping from x to the value of e in environment.
+
+   When the interpreter encounters an id expression, it looks up the corresponding value in
+   in the environment. Free variables not in env -> error
+   '''   
+ #+end_src
+
+** Static vs. Dynamic Scoping
+
+*** Definition Scope (of a name binding)
+#+begin_src python
+   '''
+   The scope of a name binding is the part of the program where the binding is in effect.
+   '''   
+ #+end_src
+
+*** Definition Static/Lexical Scoping
+ #+begin_src python
+   '''
+   The scope of a name binding is determined syntactically (at compile-time)
+   '''   
+ #+end_src
+
+*** Definition Dynamic Scoping
+ #+begin_src python
+   '''
+   
+   '''   
+ #+end_src
+
+
+
+* Template
+ #+begin_src python
+   '''
+
+   '''   
+ #+end_src
+
