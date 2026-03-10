@@ -1,4 +1,4 @@
-#+TITLE: w8stes's GNU Emacs Config
+#+TITLE: w8stes's copl summary
 #+AUTHOR: w8ste
 #+STARTUP: showerverything
 #+OPTIONS: toc:2
@@ -7,6 +7,10 @@
 - [[#two-kinds-of-language-evaluators][Two Kinds of Language Evaluators]]
   - [[#interpreter--program_l---value][Interpreter :: Program_L -> Value]]
   - [[#compiler--program_l---program_t][Compiler :: Program_L -> Program_T]]
+- [[#a-taxonomy-of-functions][A Taxonomy of Functions]]
+  - [[#first-order-functions][First-order functions]]
+  - [[#higher-order-functions][Higher-order functions]]
+  - [[#first-class-functions][First-class functions]]
 - [[#substitution][Substitution]]
   - [[#definitions][Definitions]]
   - [[#two-substitution-regimes][Two Substitution Regimes]]
@@ -18,12 +22,29 @@
   - [[#static-vs-dynamic-scoping][Static vs. Dynamic Scoping]]
   - [[#dynamic-scoping][Dynamic Scoping]]
   - [[#static-scoping][Static Scoping]]
+- [[#stores][Stores]]
+  - [[#introducing-store][Introducing store]]
 - [[#advantages-of-functional-decomposition][Advantages of Functional Decomposition]]
-- [[#function-closures][Function Closures]]
-  - [[#definition][Definition]]
+- [[#closures][Closures]]
+  - [[#function-closures][Function Closures]]
+  - [[#expression-closures][Expression Closures]]
 - [[#recursion][Recursion]]
   - [[#letrec][Letrec]]
   - [[#implementing-recursion][Implementing recursion]]
+- [[#lazy-evaluation-call-by-name][Lazy Evaluation (call by name)]]
+  - [[#advantages-of-lazy-evaluation][Advantages of Lazy evaluation]]
+- [[#eager-evaluation][Eager Evaluation]]
+  - [[#call-by-value][Call-by-Value]]
+  - [[#call-by-reference][Call-by-Reference]]
+  - [[#call-by-value-or-call-by-reference][Call-by-Value or Call-by-Reference]]
+- [[#garbage-collection][Garbage Collection]]
+  - [[#marksweep-garbage-collection][Mark&Sweep garbage collection]]
+  - [[#moving-gc][Moving GC]]
+  - [[#copying-gc][Copying GC]]
+  - [[#generational-gc][Generational GC]]
+- [[#reference-counting][Reference Counting]]
+  - [[#problems][Problems]]
+  - [[#comparison][Comparison]]
 - [[#template][Template]]
 
 * Two Kinds of Language Evaluators
@@ -69,21 +90,31 @@
 
 ***** Pros and Cons of meta interpreters
 #+begin_src python
-         '''
-         If the interpreted and the interpreter language match closely, a meta
-         interpreter can be very easy to write
+  '''
+  If the interpreted and the interpreter language match closely, a meta
+  interpreter can be very easy to write
 
-         If they do not match it can be hard
-         - Static scoping vs dynamic scoping
-         - lazy vs strict evaluation
-         - ...
+  If they do not match it can be hard
+  - Static scoping vs dynamic scoping
+  - lazy vs strict evaluation
+  - ...
 
-         A meta interpreter does not help in understtanding the features we are
-         implementing
-         - Started implementig recursion based on a cyclic environment, which is arguably
-         easier to understand than recursion and then ended up implementing cyclic
-         environments in terms of Scala's recursion!
-         '''
+  A meta interpreter does not help in understtanding the features we are
+  implementing
+  - Started implementig recursion based on a cyclic environment, which is arguably
+  easier to understand than recursion and then ended up implementing cyclic
+  environments in terms of Scala's recursion!
+  '''
+#+end_src
+
+***** When to use meta interpretation
+#+begin_src python
+  '''
+  Use a meta interpreter approach for features we understand (e.g numbers)
+  But write a syntactic interpreter for features under examination.
+  Once we understand features, we can replace them with a meta interpreter to move
+  on to more complex features.
+  '''
 #+end_src
 
 **** Meta-interpreter or Meta-circular interpreter
@@ -101,6 +132,20 @@
   '''
 #+end_src
 
+* A Taxonomy of Functions
+** First-order functions
+- Parameterise computations over data.
+- Functions that neither return nor take other functions as parameters.
+
+** Higher-order functions
+- Functions that return and/or take other functions as parameter
+- Parameterize computations over other computations
+
+** First-class functions
+- Functions are values with all the rights of other values
+- Can be constructed at runtime
+- Can be passed as aruments to and returned, stored in data structures etc.
+  
 * Substitution
 ** Definitions
 *** Binding Instance:
@@ -230,7 +275,9 @@ This is called capture-avoiding substitution function that implements sound vari
 ** Environments instead of substitution
 #+begin_src python
   '''
-  Substitution is inefficient because every variable binding requires traversing and rewriting the entire expression tree. The resulting complexity of substitution for a program with n AST nodes is O(n^2)
+  Substitution is inefficient because every variable binding requires traversing and
+  rewriting the entire expression tree. The resulting complexity of substitution for a
+  program with n AST nodes is O(n^2)
   '''
 #+end_src
 
@@ -294,6 +341,7 @@ This is called capture-avoiding substitution function that implements sound vari
 2. Add env (parameter) to the funEnv declaration.
    
 ** Dynamic Scoping
+
 *** Why it could lead to fragile software
 #+begin_src python
           '''
@@ -367,6 +415,71 @@ This is called capture-avoiding substitution function that implements sound vari
     }
 #+end_src
 
+* Stores
+
+Using environments for chaining effects won't work, because even if we pass the
+updated environment to the interpretation of the application, it will be ignored since f
+closes the body in the environment at definition time.
+We would have to use the environment at application time, which introduces dynamic scoping.
+But static scoping rules for function application will defeat environment-passing style.
+
+** Introducing store
+
+We need two repositories of information:
+- The environment for statically scoped bindings.
+- The store for tracking dynamic changes
+
+Environments maps identifiers to locations in the store and stroe maps locations to values.
+Therefore identifier lookup becomes a two-stage process
+
+*** Implementation
+#+begin_src scala
+  type Env = Map[Symbol, Location]
+  type Store = Map[Location, Val]
+#+end_src
+
+**** Function Application
+1. Interpret funExpr in env and store (function-before-arg-order)
+2. Interpret argExpr in env and funstore, yielding arValue and argStore
+3. Interpret funValues's body in the following:
+   1. Store: Reserve a new location in argStore(newLoc) and put argValue to it,
+   2. Environment: Extend funValue's environment with a binding for funValue's
+      argument to newLoc
+
+#+begin_src scala
+  def interp(expr: SCFLAE, env:Env, store: Store): (Val, Store) = expr match {
+    ...
+    case App(funExpr, argExpr) => {
+      val (funV, funStore) = interp(funExpr, env, store) // 1.
+      val (argV, argStore) = interp(argExpr, env, funStore) // 2.
+      funV match {
+        case Closure(fParam, fBody, fEnv) => {
+          val newLoc = nextLocation
+          interp(fBody, fEnv + (fParam -> newLoc), argStore + (newLoc -> argV)) // 3.
+        }
+        case _ => sys.error("can only apply functions, but got: " + funV)
+      }
+    }
+#+end_src
+
+**** Interpreting if0 Conditionals
+
+#+begin_src scala
+    def interp(expr: SCFLAE, env: Env, store: Store): (Val, Store) = expr match {
+      // ...
+      case If0(test, truth, falsity) => {
+        val (res, store1) = interp(test, env, store)
+        res match {
+          case NumV(n) => {
+            if (n == 0) interp(truth, env, store1)
+            else interp(falsity, env, store1)
+          }
+          case _ => sys.error("can only test numbers, but got: " + res)
+        }
+      }
+#+end_src
+
+
 * Advantages of Functional Decomposition
  #+begin_src python
    '''
@@ -378,7 +491,9 @@ This is called capture-avoiding substitution function that implements sound vari
    '''   
  #+end_src
 
-* Function Closures
+* Closures
+ 
+** Function Closures
 Needed for implementing first-class functions. The key issue they solve is preserving static
 (lexical) scoping when functions are treated as values, with all the rights of values.
 
@@ -389,13 +504,94 @@ Needed for implementing first-class functions. The key issue they solve is prese
 
 Standard statical scoping would fail here because x is not within the fresh environment. Therefore we need to closures to remember the current environment at function definition time.
 
-** Definition
+*** Definition
 Consists of the function + environment. Take a lock at the following expression:
 #+begin_src scheme
 (let (x 3) (fun (y) (+ x y)))
 #+end_src
 
 When evaluating the function, the closure would store the environment [x -> 3], the parameter y and the body (+ x y)
+
+** Expression Closures
+
+When implementing lazy evaluation, we accidently implemented dymanic scoping, because
+we stored expressions in the environment but ignored the scoping context in which they were
+defined. As a result, free variables in expressions get bound dymanically in the context where
+expressions are used.
+
+Like first-class functions, in a language with lazy evaluation, expression closures carry
+around the definition environment of expressions that do not directly reduce to primitive
+values.
+
+*** Implementation
+
+**** AST
+#+begin_src scala
+  sealed abstract class Val
+  case class NumV(n: Int) extends Val
+  case class FClosure(param: Symbol, body: Expr, env: Env) extends Val
+  case class EClosure(expr: Expr, env: Env) extends Val
+#+end_src
+
+**** Interpreter
+#+begin_src scala 
+  case Let(boundId, namedExpr, boundBody) =>
+    interp(boundBody, env + (boundId -> EClosure(namedExpr, env)))
+
+  case App(funExpr, argExpr) => interp(funExpr, env) match {
+  case FClosure(param, body, funEnv) =>
+    interp(body, funEnv + (param -> EClosure(argExpr, env)))
+  case _ => sys.error("can only apply closures")
+  }  
+#+end_src
+
+*** Forcing delayed evaluations
+At some point during the interpretation we need to force teh expresion enclosed into
+EClosures to actually evaluate.
+
+Fiven an EClosure v whose evaluation we want to force, stip-off EClosure skins until we
+get a real value (i.e. Numv or FClosure)
+
+#+begin_src scala
+  def strict(value: Val): Val = value match {
+    case EClosure (expr, env) => strict(interp(expr, env))
+    case _ => value
+  }
+#+end_src
+
+Notice how we need recursion, because there could be multiple layers of EClosure created.
+
+**** Strict Points
+Strict points of the language are points in the interpretation process where evaluation
+is forced.
+
+Strict points in our language:
+- When we add and subtract
+- When we apply functions, we need to force the evaluation of the ECLosure at the
+  function position
+- When we evaluate the test-part of a conditional expression
+
+*** Caching Computations
+Once we compute teh value of an exp, in addition to using it, we can also cache it for
+future use.
+The expression closure is a natural container for the cached value:
+When attempting to evaluate next time, that closure finds a value in cache and uses said
+value.
+
+Eclosures with a Cache:
+| Expr: CFAE/L | Env: Env | Cache: false|NumV|FClosure | 
+
+**** Side effects
+Any language that caches computations (eager or lazy) is making the assumption that an
+expression computes the same value every time it evaluates.
+
+- A language where expressions comppute the same value every time they evaluate
+  supports refertial transparency
+- Referential transparency simplifies reasoning about programs.
+  1. To understand a function, a programmer doesn't need to be aware of the global
+     flow of control.
+  2. One can study programs through equational reasoning, using the process of
+     reduction.
 
 * Recursion
 ** Letrec
@@ -406,7 +602,7 @@ When evaluating the function, the closure would store the environment [x -> 3], 
    '''
    (letrec fact
      (fun (n) ((if0 n) (1) (* n (fact (- n 1))))
-     (fact 5))
+     (fact 5)))
 
     # It is worth noting, that "fact" refers to an identifier.
     ρ_{letrec,body}(e) =
@@ -427,6 +623,144 @@ When evaluating the function, the closure would store the environment [x -> 3], 
 
 ** Implementing recursion
 *** Cyclic Environments
+A cyclic environment is an environment that contains a binding that refers to itself.
+#+begin_src python
+env =
+  fact -> closure(param=n, body=..., env)
+#+end_src
+
+Notice closure.env = env. The environment references a closure that references the same
+environment. That loop is a cycle.
+This works becuase when the function body executes 'fact(n - 1)' it looks up env("fact"),
+which returns the closure, enabling recursion.
+
+**** Cyclic Environments implementation
+#+begin_src scala
+def recBind(boundId: String, namedExpr: Expr, env: Env): Env =
+  def recEnv(id: String): Value =
+    if (id == boundId)
+      interp(namedExpr, recEnv)
+    else
+      env(id)
+
+  recEnv
+#+end_src
+
+**** One sentence explanation:
+A cyclic environment is an environment that contains a binding whose value refers back to the same environment, enabling recursive functions to access their own bindings.
+
+* Lazy Evaluation (call by name)
+** Advantages of Lazy evaluation
+- Fewest number of expressions evaluated: Expressions evaluated only if
+  necessary and only once.
+- Control structures as regular functions rather than built-in primitives.
+- Enables infinite data structures
+- Modular process-style program organization without multiple passes over the data.
+
+* Eager Evaluation
+** Call-by-Value
+Implements the standard form of eager evaluation.
+
+argValue is put into a new store location and the formal parameter is bound to that new
+location in the environment.
+Changes to the formal parameter in the body of the function are not visible outside
+of the function.
+#+begin_src scala
+  def interp(expr: SCFLAE, env: Env, store: Store): (Val, Store) = expr match {
+    ...
+    case App(funExpr, argExpr) => {
+      val (funV, funStore) = interp(funExpr, env, store)
+      val (argV, argStore) = interp(argExpr, env, funStore)
+      funV match {
+        case Closure(fParam, fBody, fEnv) => {
+          val newLoc = nextLocation
+          interp(fBody, fEnv + (fParam -> newLoc), argStore + (newLoc -> argV))
+        }
+        case _ => sys.error("can only apply functions, but got: " + funV)
+      }
+    }
+  }
+#+end_src
+
+** Call-by-Reference
+A reference to (the location of) the actual argument (not its value) is passed when a function
+is called.
+Updates to the reference (location) within the called function become visible to the calling
+context.
+
+*** Implementation
+#+begin_src scala
+  def interp(expr: SCFLAE, env: Env, store: Store): (Val, Store) = expr match {
+    // ...
+    case ReFun(arg, body) => (RefClosure(arg, body, env), store)
+  }
+#+end_src
+
+Like Closure values, Refclosure contatains a function and the environment
+Different tags are used to distinguish between the two kind of functions at application time.
+
+** Call-by-Value or Call-by-Reference
+To master complexity, we need abstraction boundaries
+between units of modularity (e.g., procedures), that limit
+hidden interactions and restrict interferences to
+facilitate reasoning about their behavior in isolation.
+There is agreement in modern languages that parameters
+should be passed by values!
+
+
+*** Reflecting on Call-by-Reference
+**** Advantage
+Less allocation to the store.
+
+**** Disadvantage
+Creates aliases, making reasoning about programs harder.
+
+* Garbage Collection
+Lets languages dissociate scope from the reclamation of space consumed by values.
+- Can remove unreachable values.
+- Can be quite performant.
+
+** Mark&Sweep garbage collection
+- when memory runs low, scan the heap
+- mark objects that are referenced on the stack
+  - transively: mark objects referenced by marked marked objects
+- sweep: release all objects without a mark
+- reset the marks
+
+** Moving GC
+Collects live object in one part of heap
++ faster allocation, no mark reset for free memory region
+- all references must be managed by GC, no pointer arithmetic
+
+** Copying GC
+Divide heap into from-space and to-space. When from-space is full, copy only live objects
+to to-space. Flip roles of spaces
++ very fast allocation
+- can only use half of available memory
+
+** Generational GC
+Young objects are more likely to die => divide heap into different generations. Run GC on
+younger generation more frequently.
+
+* Reference Counting
+Keeping track of number of references for each object.
+If the number reaches 0, the object can be released
+
+** Problems
+- releasing a single object can release other objects
+- no support for cyclic data structures: reference count never reaches 0
+
+** Comparison
+Reference counting:
++ incremental: deallocate as soon as object is unreferenced
++ re-use freed cells immediately
+- space and time overhead: keeping track of references
+- no support for cyclic structures
+Mark&sweep GC:
++ handles cycles
++ small space overhead (1 bit per cell)
+- requires stopping of regular program execution
+- fragmentation: slower allocation, cache misses
 
 * Template
  #+begin_src python
