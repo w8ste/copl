@@ -18,6 +18,12 @@
   - [[#static-vs-dynamic-scoping][Static vs. Dynamic Scoping]]
   - [[#dynamic-scoping][Dynamic Scoping]]
   - [[#static-scoping][Static Scoping]]
+- [[#advantages-of-functional-decomposition][Advantages of Functional Decomposition]]
+- [[#function-closures][Function Closures]]
+  - [[#definition][Definition]]
+- [[#recursion][Recursion]]
+  - [[#letrec][Letrec]]
+  - [[#implementing-recursion][Implementing recursion]]
 - [[#template][Template]]
 
 * Two Kinds of Language Evaluators
@@ -43,6 +49,41 @@
   The language the the interpreter evaluates. We assume that we already understand
   the host langugage.
   '''
+#+end_src
+
+**** Syntactic interpreter
+#+begin_src python
+  '''
+  Uses the host language only for the purpose of representing terms of the interpreted
+  (object) language. All the behavior is implemented explicitly.
+  '''  
+#+end_src
+
+**** Meta interpreter
+#+begin_src python
+  '''
+  Uses features of the interpreting language to directly implement behavior of the
+  interpreted language.
+  '''
+#+end_src
+
+***** Pros and Cons of meta interpreters
+#+begin_src python
+         '''
+         If the interpreted and the interpreter language match closely, a meta
+         interpreter can be very easy to write
+
+         If they do not match it can be hard
+         - Static scoping vs dynamic scoping
+         - lazy vs strict evaluation
+         - ...
+
+         A meta interpreter does not help in understtanding the features we are
+         implementing
+         - Started implementig recursion based on a cyclic environment, which is arguably
+         easier to understand than recursion and then ended up implementing cyclic
+         environments in terms of Scala's recursion!
+         '''
 #+end_src
 
 **** Meta-interpreter or Meta-circular interpreter
@@ -325,6 +366,68 @@ This is called capture-avoiding substitution function that implements sound vari
       }
     }
 #+end_src
+
+* Advantages of Functional Decomposition
+ #+begin_src python
+   '''
+   Functional decomposition supports program designs that are modular by combining
+   independent components, instantiated from recursion operators that can be provided
+   in a library of standard components.
+
+   Modular construction is a powerful strategy for controlling complexity in engineering design.
+   '''   
+ #+end_src
+
+* Function Closures
+Needed for implementing first-class functions. The key issue they solve is preserving static
+(lexical) scoping when functions are treated as values, with all the rights of values.
+
+#+begin_src scala
+  interp(Let("x", Num(3),
+    App( Fun("y", Add("x" "y")) Num(4))) )
+#+end_src
+
+Standard statical scoping would fail here because x is not within the fresh environment. Therefore we need to closures to remember the current environment at function definition time.
+
+** Definition
+Consists of the function + environment. Take a lock at the following expression:
+#+begin_src scheme
+(let (x 3) (fun (y) (+ x y)))
+#+end_src
+
+When evaluating the function, the closure would store the environment [x -> 3], the parameter y and the body (+ x y)
+
+* Recursion
+** Letrec
+ #+begin_src python
+   '''
+   letrec allows us to have recursive bindings. Take a look at the following example, without
+   letrec, the function cannot refer to itself during its own definition.
+   '''
+   (letrec fact
+     (fun (n) ((if0 n) (1) (* n (fact (- n 1))))
+     (fact 5))
+
+    # It is worth noting, that "fact" refers to an identifier.
+    ρ_{letrec,body}(e) =
+    e + ("fact" ->
+          Closure(
+          "n",
+          If0( /*…fact…*/ ),
+          e + ("fact" ->
+                Closure(
+                "n",
+                If0( /*…fact…*/ ),
+                e + ("fact" ->
+                      Closure(
+                      "n",
+                      If0( /*…fact…*/ ),
+                      e ))))))
+ #+end_src
+
+** Implementing recursion
+*** Cyclic Environments
+
 * Template
  #+begin_src python
    '''
